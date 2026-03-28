@@ -297,11 +297,41 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 .nav__cta::after { display: none !important; }
 .nav__cta:hover  { background: var(--terra-light) !important; }
 
+/* Language Switcher */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.lang-switch__btn {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.45);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem 0.1rem;
+  transition: color var(--t);
+  line-height: 1;
+}
+.lang-switch__btn:hover { color: rgba(255, 255, 255, 0.85); }
+.lang-switch__btn--active { color: var(--white); }
+.lang-switch__sep {
+  font-size: 0.55rem;
+  color: rgba(255, 255, 255, 0.2);
+  line-height: 1;
+}
+
 .nav__hamburger {
   display: none;
   flex-direction: column;
   gap: 5px;
   padding: 6px;
+}
+@media (max-width: 768px) {
+  .lang-switch { display: none; }
 }
 .nav__hamburger span {
   display: block;

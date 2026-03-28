@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Meltem Pansiyon — A serene guesthouse in Sığacık, Turkey's first Cittaslow. Experience authentic Aegean hospitality by the sea.">
+  <meta name="description" content="Meltem Pansiyon — Türkiye'nin ilk Cittaslow kenti Sığacık'ta, denize yüz adım mesafede huzurlu bir konaklama deneyimi. Otantik Ege misafirperverliğini yaşayın.">
   <title>Meltem Pansiyon · Sığacık, Ege</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,12 +23,17 @@
         </div>
       </a>
       <ul class="nav__links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#rooms">Rooms</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact" class="nav__cta">Book Now</a></li>
+        <li><a href="#about">Hakkımızda</a></li>
+        <li><a href="#rooms">Odalarımız</a></li>
+        <li><a href="#gallery">Galeri</a></li>
+        <li><a href="#contact" class="nav__cta">Rezervasyon Yap</a></li>
       </ul>
-      <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation menu">
+      <div class="lang-switch" id="langSwitch" aria-label="Dil seçimi">
+        <button class="lang-switch__btn lang-switch__btn--active" data-lang="tr" aria-pressed="true">TR</button>
+        <span class="lang-switch__sep">|</span>
+        <button class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menüyü aç veya kapat">
         <span></span>
         <span></span>
         <span></span>
@@ -38,12 +43,12 @@
 
   <!-- Mobile Overlay Menu -->
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <button class="mobile-menu__close" id="mobileClose" aria-label="Close menu">✕</button>
+    <button class="mobile-menu__close" id="mobileClose" aria-label="Menüyü kapat">✕</button>
     <ul>
-      <li><a href="#about" class="mobile-menu__link">About</a></li>
-      <li><a href="#rooms" class="mobile-menu__link">Rooms</a></li>
-      <li><a href="#gallery" class="mobile-menu__link">Gallery</a></li>
-      <li><a href="#contact" class="mobile-menu__link">Contact &amp; Book</a></li>
+      <li><a href="#about" class="mobile-menu__link">Hakkımızda</a></li>
+      <li><a href="#rooms" class="mobile-menu__link">Odalarımız</a></li>
+      <li><a href="#gallery" class="mobile-menu__link">Galeri</a></li>
+      <li><a href="#contact" class="mobile-menu__link">İletişim &amp; Rezervasyon</a></li>
     </ul>
     <div class="mobile-menu__footer">
       <p>Sığacık · Seferihisar · İzmir</p>
@@ -55,7 +60,7 @@
     <div class="hero__bg">
       <img
         src="https://picsum.photos/seed/sigacik-coast/1920/1080"
-        alt="Aegean coastline near Sığacık"
+        alt="Sığacık yakınlarında Ege sahili"
         class="hero__img"
         loading="eager"
       >
@@ -64,23 +69,23 @@
     </div>
 
     <div class="hero__content">
-      <p class="hero__eyebrow reveal-up">Sığacık &nbsp;·&nbsp; Cittaslow &nbsp;·&nbsp; Aegean Turkey</p>
+      <p class="hero__eyebrow reveal-up">Sığacık &nbsp;·&nbsp; Cittaslow &nbsp;·&nbsp; Ege, Türkiye</p>
       <h1 class="hero__title reveal-up" style="--delay: 0.1s">
         <span class="hero__title-line">Meltem</span>
         <span class="hero__title-line hero__title-italic">Pansiyon</span>
       </h1>
       <p class="hero__subtitle reveal-up" style="--delay: 0.22s">
-        Where the Aegean breeze finds its rest.<br>
-        A slow place for unhurried souls.
+        Ege rüzgârının huzur bulduğu yer.<br>
+        Acelesiz ruhlar için yavaş bir sığınak.
       </p>
       <div class="hero__actions reveal-up" style="--delay: 0.34s">
-        <a href="#rooms" class="btn btn--primary">Explore Rooms</a>
-        <a href="#contact" class="btn btn--ghost">Book Your Stay</a>
+        <a href="#rooms" class="btn btn--primary">Odalarımızı Keşfedin</a>
+        <a href="#contact" class="btn btn--ghost">Rezervasyon Yapın</a>
       </div>
     </div>
 
     <div class="hero__scroll" aria-hidden="true">
-      <span>Scroll</span>
+      <span>Keşfet</span>
       <div class="hero__scroll-bar"></div>
     </div>
 
@@ -98,51 +103,52 @@
 
         <div class="about__imagery reveal-left">
           <div class="about__img-main">
-            <img src="https://picsum.photos/seed/aegean-courtyard/600/750" alt="Guesthouse courtyard with stone walls" loading="lazy">
+            <img src="https://picsum.photos/seed/aegean-courtyard/600/750" alt="Taş duvarlarla çevrili pansiyon avlusu" loading="lazy">
           </div>
           <div class="about__img-accent">
-            <img src="https://picsum.photos/seed/turkish-breakfast/420/310" alt="Traditional Aegean breakfast" loading="lazy">
+            <img src="https://picsum.photos/seed/turkish-breakfast/420/310" alt="Geleneksel Ege kahvaltısı" loading="lazy">
           </div>
           <div class="about__badge">
-            <span>Est.</span>
+            <span>Kur.</span>
             <strong>1987</strong>
           </div>
         </div>
 
         <div class="about__content reveal-right">
-          <span class="section__eyebrow">Hakkımızda / About Us</span>
-          <h2 class="section__title">A haven in<br><em>Cittaslow</em></h2>
+          <span class="section__eyebrow">Hakkımızda</span>
+          <h2 class="section__title">Cittaslow'un<br><em>kalbinde huzur</em></h2>
           <div class="about__rule"></div>
           <p class="about__lead">
-            Tucked behind ancient stone walls in the heart of Sığacık — Turkey's
-            first <em>Cittaslow</em> (Slow City) — Meltem Pansiyon has sheltered
-            wanderers, artists, and lovers of the unhurried life since 1987.
+            Türkiye'nin ilk <em>Cittaslow</em> (Sakin Şehir) unvanını taşıyan
+            Sığacık'ın tarihi taş surlarının ardında, 1987'den bu yana
+            Meltem Pansiyon; yorgun yolcuları, sanatçıları ve yavaş yaşamın
+            güzelliğine inananları kucaklamaktadır.
           </p>
           <p class="about__text">
-            Our family-run guesthouse breathes the rhythm of the Aegean: mornings
-            scented with wild thyme and fresh börek, afternoons dissolving into
-            the deep blue of the bay, evenings wrapped in the warm amber of
-            candlelight and good rakı.
+            Aile işletmemiz, Ege'nin ritmiyle nefes alır: yabani kekik ve
+            taze börek kokusuyla açılan sabahlar, körfezin koyu mavisiyle
+            eriyip giden öğleden sonralar ve mum ışığı ile kadeh sesi eşliğinde
+            sarıp sarmalayan akşamlar.
           </p>
           <blockquote class="about__quote">
-            "In Sığacık, even time has learned to walk slowly."
+            "Sığacık'ta zamanın kendisi de yavaş yürümeyi öğrenmiş."
           </blockquote>
           <div class="about__features">
             <div class="about__feature">
               <span class="about__feature-icon">◈</span>
-              Family-run since 1987
+              1987'den beri aile işletmesi
             </div>
             <div class="about__feature">
               <span class="about__feature-icon">◈</span>
-              100 m from the sea
+              Denize 100 metre mesafe
             </div>
             <div class="about__feature">
               <span class="about__feature-icon">◈</span>
-              Organic breakfast included
+              Organik kahvaltı dahil
             </div>
             <div class="about__feature">
               <span class="about__feature-icon">◈</span>
-              Free bicycle rental
+              Ücretsiz bisiklet kiralama
             </div>
           </div>
         </div>
@@ -155,9 +161,9 @@
   <section class="rooms section section--linen" id="rooms">
     <div class="container">
       <div class="section__header reveal-up">
-        <span class="section__eyebrow">Odalar / Our Rooms</span>
-        <h2 class="section__title">Find your<br><em>corner of blue</em></h2>
-        <p class="section__desc">Each room is a story — handpicked furnishings, hand-stitched linens, and a window that frames the Aegean just right.</p>
+        <span class="section__eyebrow">Odalarımız</span>
+        <h2 class="section__title">Maviyle buluşacağınız<br><em>köşenizi bulun</em></h2>
+        <p class="section__desc">Her oda bir hikâye — özenle seçilmiş mobilyalar, el dokuması keten çarşaflar ve Ege'yi tam anlamıyla çerçeveleyen bir pencere.</p>
       </div>
 
       <div class="rooms__grid">
@@ -165,28 +171,28 @@
         <!-- Standard Room -->
         <article class="room-card reveal-up" style="--delay: 0s">
           <div class="room-card__img-wrap">
-            <img src="https://picsum.photos/seed/room-stone/600/400" alt="Taş Oda — Standard Room" loading="lazy">
+            <img src="https://picsum.photos/seed/room-stone/600/400" alt="Taş Oda — Standart Oda" loading="lazy">
             <div class="room-card__hover-overlay">
-              <a href="#contact" class="btn btn--sm btn--primary">Book This Room</a>
+              <a href="#contact" class="btn btn--sm btn--primary">Bu Odayı Rezerve Et</a>
             </div>
           </div>
           <div class="room-card__body">
-            <div class="room-card__tag">Standard</div>
-            <h3 class="room-card__name">Taş Oda <span>/ Stone Room</span></h3>
-            <p class="room-card__desc">Whitewashed walls, terracotta tiles, and a wrought-iron bed that has held a thousand good dreams.</p>
+            <div class="room-card__tag">Standart</div>
+            <h3 class="room-card__name">Taş Oda</h3>
+            <p class="room-card__desc">Badanalı duvarlar, terracotta karolar ve binlerce güzel düşe ev sahipliği yapmış dövme demir bir yatak.</p>
             <ul class="room-card__features">
-              <li>Double or twin beds</li>
-              <li>En-suite bathroom</li>
-              <li>Air conditioning</li>
-              <li>Free Wi-Fi</li>
+              <li>Çift veya twin yatak</li>
+              <li>Özel banyo</li>
+              <li>Klima</li>
+              <li>Ücretsiz Wi-Fi</li>
             </ul>
             <div class="room-card__footer">
               <div class="room-card__price">
-                <span>from</span>
+                <span>başlangıç</span>
                 <strong>€65</strong>
-                <span>/ night</span>
+                <span>/ gece</span>
               </div>
-              <a href="#contact" class="btn btn--sm btn--outline">Reserve</a>
+              <a href="#contact" class="btn btn--sm btn--outline">Rezerve Et</a>
             </div>
           </div>
         </article>
@@ -194,29 +200,29 @@
         <!-- Sea View Room (featured) -->
         <article class="room-card room-card--featured reveal-up" style="--delay: 0.12s">
           <div class="room-card__img-wrap">
-            <img src="https://picsum.photos/seed/room-seaview/600/400" alt="Deniz Odası — Sea View Room" loading="lazy">
-            <div class="room-card__badge">Most Loved</div>
+            <img src="https://picsum.photos/seed/room-seaview/600/400" alt="Deniz Odası — Deniz Manzaralı Oda" loading="lazy">
+            <div class="room-card__badge">En Çok Tercih Edilen</div>
             <div class="room-card__hover-overlay">
-              <a href="#contact" class="btn btn--sm btn--primary">Book This Room</a>
+              <a href="#contact" class="btn btn--sm btn--primary">Bu Odayı Rezerve Et</a>
             </div>
           </div>
           <div class="room-card__body">
-            <div class="room-card__tag">Sea View</div>
-            <h3 class="room-card__name">Deniz Odası <span>/ Sea Room</span></h3>
-            <p class="room-card__desc">Wake to the glittering Aegean from your private terrace. Salt air, morning light, and a cup of Turkish tea.</p>
+            <div class="room-card__tag">Deniz Manzaralı</div>
+            <h3 class="room-card__name">Deniz Odası</h3>
+            <p class="room-card__desc">Özel terasınızdan pırıl pırıl Ege'ye uyanın. Tuzlu hava, sabah ışığı ve bir bardak çay eşliğinde.</p>
             <ul class="room-card__features">
-              <li>Queen bed with sea view</li>
-              <li>Private terrace</li>
-              <li>Rain shower en-suite</li>
-              <li>Mini-fridge &amp; kettle</li>
+              <li>Deniz manzaralı çift kişilik yatak</li>
+              <li>Özel teras</li>
+              <li>Yağmur duşlu banyo</li>
+              <li>Mini buzdolabı &amp; kettle</li>
             </ul>
             <div class="room-card__footer">
               <div class="room-card__price">
-                <span>from</span>
+                <span>başlangıç</span>
                 <strong>€95</strong>
-                <span>/ night</span>
+                <span>/ gece</span>
               </div>
-              <a href="#contact" class="btn btn--sm btn--outline">Reserve</a>
+              <a href="#contact" class="btn btn--sm btn--outline">Rezerve Et</a>
             </div>
           </div>
         </article>
@@ -224,28 +230,28 @@
         <!-- Garden Suite -->
         <article class="room-card reveal-up" style="--delay: 0.24s">
           <div class="room-card__img-wrap">
-            <img src="https://picsum.photos/seed/room-garden/600/400" alt="Bahçe Süiti — Garden Suite" loading="lazy">
+            <img src="https://picsum.photos/seed/room-garden/600/400" alt="Bahçe Süiti" loading="lazy">
             <div class="room-card__hover-overlay">
-              <a href="#contact" class="btn btn--sm btn--primary">Book This Room</a>
+              <a href="#contact" class="btn btn--sm btn--primary">Bu Odayı Rezerve Et</a>
             </div>
           </div>
           <div class="room-card__body">
-            <div class="room-card__tag">Garden Suite</div>
-            <h3 class="room-card__name">Bahçe Süiti <span>/ Garden Suite</span></h3>
-            <p class="room-card__desc">A ground-floor retreat opening onto a private jasmine garden. Space, scent, and absolute stillness.</p>
+            <div class="room-card__tag">Bahçe Süiti</div>
+            <h3 class="room-card__name">Bahçe Süiti</h3>
+            <p class="room-card__desc">Özel yasemin bahçesine açılan zemin kat kaçamağı. Ferahlık, koku ve sonsuz bir sessizlik.</p>
             <ul class="room-card__features">
-              <li>King bed + lounge area</li>
-              <li>Private garden access</li>
-              <li>Outdoor shower</li>
-              <li>Ideal for families</li>
+              <li>King yatak + oturma alanı</li>
+              <li>Özel bahçe erişimi</li>
+              <li>Açık hava duşu</li>
+              <li>Aileler için ideal</li>
             </ul>
             <div class="room-card__footer">
               <div class="room-card__price">
-                <span>from</span>
+                <span>başlangıç</span>
                 <strong>€120</strong>
-                <span>/ night</span>
+                <span>/ gece</span>
               </div>
-              <a href="#contact" class="btn btn--sm btn--outline">Reserve</a>
+              <a href="#contact" class="btn btn--sm btn--outline">Rezerve Et</a>
             </div>
           </div>
         </article>
@@ -264,43 +270,43 @@
   <section class="gallery section" id="gallery">
     <div class="container">
       <div class="section__header reveal-up">
-        <span class="section__eyebrow">Galeri / Gallery</span>
-        <h2 class="section__title">Moments in<br><em>blue and gold</em></h2>
+        <span class="section__eyebrow">Galerimiz</span>
+        <h2 class="section__title">Mavi ve altın<br><em>anlardan kesitler</em></h2>
       </div>
     </div>
 
     <div class="gallery__grid">
       <div class="gallery__item gallery__item--1 reveal-up" style="--delay: 0s">
-        <img src="https://picsum.photos/seed/sigacik-harbor/900/600" alt="Sığacık harbor at dusk" loading="lazy">
-        <div class="gallery__caption"><span>Sığacık Harbour</span></div>
+        <img src="https://picsum.photos/seed/sigacik-harbor/900/600" alt="Sığacık limanı akşam saatlerinde" loading="lazy">
+        <div class="gallery__caption"><span>Sığacık Limanı</span></div>
       </div>
       <div class="gallery__item gallery__item--2 reveal-up" style="--delay: 0.08s">
-        <img src="https://picsum.photos/seed/aegean-breakfast/500/600" alt="Traditional Aegean breakfast spread" loading="lazy">
-        <div class="gallery__caption"><span>Aegean Breakfast</span></div>
+        <img src="https://picsum.photos/seed/aegean-breakfast/500/600" alt="Geleneksel Ege kahvaltısı" loading="lazy">
+        <div class="gallery__caption"><span>Ege Kahvaltısı</span></div>
       </div>
       <div class="gallery__item gallery__item--3 reveal-up" style="--delay: 0.16s">
-        <img src="https://picsum.photos/seed/stone-wall/500/800" alt="Ancient stone courtyard wall" loading="lazy">
-        <div class="gallery__caption"><span>Stone Courtyard</span></div>
+        <img src="https://picsum.photos/seed/stone-wall/500/800" alt="Tarihi taş avlu duvarı" loading="lazy">
+        <div class="gallery__caption"><span>Taş Avlu</span></div>
       </div>
       <div class="gallery__item gallery__item--4 reveal-up" style="--delay: 0.08s">
-        <img src="https://picsum.photos/seed/village-lane/500/500" alt="Sığacık village lane" loading="lazy">
-        <div class="gallery__caption"><span>Village Lanes</span></div>
+        <img src="https://picsum.photos/seed/village-lane/500/500" alt="Sığacık köy sokakları" loading="lazy">
+        <div class="gallery__caption"><span>Köy Sokakları</span></div>
       </div>
       <div class="gallery__item gallery__item--5 reveal-up" style="--delay: 0.16s">
-        <img src="https://picsum.photos/seed/aegean-wide/900/500" alt="Wide Aegean sea view" loading="lazy">
-        <div class="gallery__caption"><span>Aegean Waters</span></div>
+        <img src="https://picsum.photos/seed/aegean-wide/900/500" alt="Geniş Ege denizi manzarası" loading="lazy">
+        <div class="gallery__caption"><span>Ege Suları</span></div>
       </div>
       <div class="gallery__item gallery__item--6 reveal-up" style="--delay: 0.24s">
-        <img src="https://picsum.photos/seed/sunset-gold/500/500" alt="Golden Aegean sunset" loading="lazy">
-        <div class="gallery__caption"><span>Golden Hour</span></div>
+        <img src="https://picsum.photos/seed/sunset-gold/500/500" alt="Altın rengi Ege günbatımı" loading="lazy">
+        <div class="gallery__caption"><span>Altın Saat</span></div>
       </div>
       <div class="gallery__item gallery__item--7 reveal-up" style="--delay: 0.16s">
-        <img src="https://picsum.photos/seed/room-detail/500/500" alt="Room interior detail" loading="lazy">
-        <div class="gallery__caption"><span>Room Details</span></div>
+        <img src="https://picsum.photos/seed/room-detail/500/500" alt="Oda iç mekan detayı" loading="lazy">
+        <div class="gallery__caption"><span>Oda Detayları</span></div>
       </div>
       <div class="gallery__item gallery__item--8 reveal-up" style="--delay: 0.24s">
-        <img src="https://picsum.photos/seed/olive-grove/500/500" alt="Olive grove near Sığacık" loading="lazy">
-        <div class="gallery__caption"><span>Olive Groves</span></div>
+        <img src="https://picsum.photos/seed/olive-grove/500/500" alt="Sığacık yakınlarında zeytin bahçesi" loading="lazy">
+        <div class="gallery__caption"><span>Zeytin Bahçeleri</span></div>
       </div>
     </div>
   </section>
@@ -312,11 +318,12 @@
 
         <!-- Info Column -->
         <div class="contact__info reveal-left">
-          <span class="section__eyebrow section__eyebrow--light">İletişim / Contact</span>
-          <h2 class="section__title section__title--light">Come,<br><em>stay a while.</em></h2>
+          <span class="section__eyebrow section__eyebrow--light">İletişim</span>
+          <h2 class="section__title section__title--light">Gelin,<br><em>bir süre kalın.</em></h2>
           <p class="contact__intro">
-            Whether you have a question, a special request, or simply want to
-            know if the figs are ripe this season — we'd love to hear from you.
+            Bir sorunuz mu var, özel bir isteğiniz mi? Ya da bu sezon
+            incirlerin olup olmadığını mı merak ediyorsunuz? Sizi burada
+            görmekten mutluluk duyarız.
           </p>
 
           <div class="contact__details">
@@ -325,8 +332,8 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
               <div>
-                <strong>Address</strong>
-                <p>Kaleiçi Mah. Sahil Cad. No:12<br>Sığacık, Seferihisar<br>İzmir, Turkey 35460</p>
+                <strong>Adres</strong>
+                <p>Kaleiçi Mah. Sahil Cad. No:12<br>Sığacık, Seferihisar<br>İzmir, Türkiye 35460</p>
               </div>
             </div>
             <div class="contact__detail">
@@ -334,7 +341,7 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.11 8.85a16 16 0 006 6l1.21-1.21a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
               </div>
               <div>
-                <strong>Phone</strong>
+                <strong>Telefon</strong>
                 <p><a href="tel:+902328000000">+90 232 800 00 00</a></p>
                 <p><a href="tel:+905550000000">+90 555 000 00 00</a> <span class="badge">WhatsApp</span></p>
               </div>
@@ -344,7 +351,7 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               </div>
               <div>
-                <strong>Email</strong>
+                <strong>E-posta</strong>
                 <p><a href="mailto:info@meltempansiyon.com">info@meltempansiyon.com</a></p>
               </div>
             </div>
@@ -353,8 +360,8 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               </div>
               <div>
-                <strong>Check-in / Check-out</strong>
-                <p>Check-in: 14:00 — Check-out: 11:00</p>
+                <strong>Giriş / Çıkış</strong>
+                <p>Giriş: 14:00 — Çıkış: 11:00</p>
               </div>
             </div>
           </div>
@@ -369,54 +376,54 @@
         <!-- Form Column -->
         <div class="contact__form-wrap reveal-right">
           <form class="contact__form" id="contactForm" novalidate>
-            <h3 class="contact__form-title">Send us a message</h3>
+            <h3 class="contact__form-title">Bize mesaj gönderin</h3>
             <div class="form__row">
               <div class="form__group">
-                <label for="name">Full Name <span class="required">*</span></label>
-                <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+                <label for="name">Ad Soyad <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Adınız ve soyadınız" required autocomplete="name">
               </div>
               <div class="form__group">
-                <label for="email">Email <span class="required">*</span></label>
-                <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+                <label for="email">E-posta <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="ornek@eposta.com" required autocomplete="email">
               </div>
             </div>
             <div class="form__row">
               <div class="form__group">
-                <label for="phone">Phone</label>
+                <label for="phone">Telefon</label>
                 <input type="tel" id="phone" name="phone" placeholder="+90 ..." autocomplete="tel">
               </div>
               <div class="form__group">
-                <label for="room">Room Type</label>
+                <label for="room">Oda Tipi</label>
                 <select id="room" name="room">
-                  <option value="">Select a room…</option>
-                  <option value="standard">Taş Oda — Standard (€65/night)</option>
-                  <option value="seaview">Deniz Odası — Sea View (€95/night)</option>
-                  <option value="garden">Bahçe Süiti — Garden Suite (€120/night)</option>
+                  <option value="">Oda seçiniz…</option>
+                  <option value="standard">Taş Oda — Standart (€65/gece)</option>
+                  <option value="seaview">Deniz Odası — Deniz Manzaralı (€95/gece)</option>
+                  <option value="garden">Bahçe Süiti (€120/gece)</option>
                 </select>
               </div>
             </div>
             <div class="form__row">
               <div class="form__group">
-                <label for="checkin">Check-in Date</label>
+                <label for="checkin">Giriş Tarihi</label>
                 <input type="date" id="checkin" name="checkin">
               </div>
               <div class="form__group">
-                <label for="checkout">Check-out Date</label>
+                <label for="checkout">Çıkış Tarihi</label>
                 <input type="date" id="checkout" name="checkout">
               </div>
             </div>
             <div class="form__group">
-              <label for="message">Message <span class="required">*</span></label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell us about your plans, any special requests, or simply say hello…" required></textarea>
+              <label for="message">Mesajınız <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="4" placeholder="Planlarınızı, özel isteklerinizi paylaşın ya da sadece merhaba deyin…" required></textarea>
             </div>
             <button type="submit" class="btn btn--primary btn--full">
-              <span class="btn__text">Send Message</span>
+              <span class="btn__text">Mesaj Gönder</span>
               <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </button>
-            <p class="form__note">We typically respond within a few hours. ☀</p>
+            <p class="form__note">Genellikle birkaç saat içinde yanıt veririz. ☀</p>
             <div class="form__success" id="formSuccess" aria-live="polite">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Your message has been sent! We'll be in touch very soon.
+              Mesajınız iletildi! En kısa sürede sizinle iletişime geçeceğiz.
             </div>
           </form>
         </div>
@@ -433,16 +440,16 @@
           <div class="nav__logo-mark nav__logo-mark--sm">M</div>
           <div>
             <strong>Meltem Pansiyon</strong>
-            <p>Sığacık · Seferihisar · İzmir, Turkey</p>
+            <p>Sığacık · Seferihisar · İzmir, Türkiye</p>
           </div>
         </div>
-        <nav class="footer__nav" aria-label="Footer navigation">
-          <a href="#about">About</a>
-          <a href="#rooms">Rooms</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
+        <nav class="footer__nav" aria-label="Alt bilgi navigasyonu">
+          <a href="#about">Hakkımızda</a>
+          <a href="#rooms">Odalarımız</a>
+          <a href="#gallery">Galeri</a>
+          <a href="#contact">İletişim</a>
         </nav>
-        <p class="footer__copy">© 2026 Meltem Pansiyon. Made with love in Sığacık.</p>
+        <p class="footer__copy">© 2026 Meltem Pansiyon. Sığacık'tan sevgiyle yapıldı.</p>
       </div>
     </div>
   </footer>
